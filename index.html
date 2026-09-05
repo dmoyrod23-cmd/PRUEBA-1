@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Álbum de Sellos de España</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="album" id="album">
+
+  <!-- Portada -->
+  <section class="page cover" data-page="cover">
+    <div class="cover-content">
+      <div class="cover-emblem">🇪🇸</div>
+      <h1>Álbum de Sellos<br>de España</h1>
+      <p class="cover-subtitle">Colección filatélica personal</p>
+      <div class="cover-stats" id="cover-stats">0 / 0 sellos coleccionados</div>
+      <button class="btn-start" id="btn-start">Abrir álbum</button>
+    </div>
+  </section>
+
+  <!-- Las páginas de contenido se generan por JS -->
+  <div id="pages-container"></div>
+
+</div>
+
+<nav class="album-nav" id="album-nav">
+  <button id="prev-page" class="nav-btn" aria-label="Página anterior">‹</button>
+  <div class="nav-title" id="nav-title">Portada</div>
+  <button id="next-page" class="nav-btn" aria-label="Página siguiente">›</button>
+</nav>
+
+<!-- Modal para añadir/editar un sello -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal">
+    <h2 id="modal-title">Añadir sello</h2>
+    <div class="modal-preview" id="modal-preview">
+      <span id="modal-preview-placeholder">Sin imagen</span>
+      <img id="modal-preview-img" hidden>
+    </div>
+    <label class="field">
+      <span>Imagen del sello</span>
+      <input type="file" id="input-image" accept="image/*">
+    </label>
+    <label class="field">
+      <span>Nombre</span>
+      <input type="text" id="input-name" placeholder="Ej. Don Quijote de la Mancha">
+    </label>
+    <label class="field">
+      <span>Año</span>
+      <input type="text" id="input-year" placeholder="Ej. 1965">
+    </label>
+    <label class="field">
+      <span>Valor facial</span>
+      <input type="text" id="input-value" placeholder="Ej. 1 peseta">
+    </label>
+    <div class="modal-actions">
+      <button class="btn-danger" id="btn-delete" hidden>Eliminar</button>
+      <div class="modal-actions-right">
+        <button class="btn-secondary" id="btn-cancel">Cancelar</button>
+        <button class="btn-primary" id="btn-save">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
