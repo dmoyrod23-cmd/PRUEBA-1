@@ -1,0 +1,18 @@
+<%- include("partials/header", { titulo }) %>
+
+<section>
+  <h1>Acerca de este proyecto</h1>
+  <p>
+    Estructura MVC minimalista construida con Node.js y Express, pensada
+    como base didáctica para entender el patrón Modelo-Vista-Controlador
+    junto a un enrutador central.
+  </p>
+  <ul>
+    <li><strong>src/routes</strong>: define las rutas y qué controlador atiende cada una.</li>
+    <li><strong>src/controllers</strong>: coordina la petición, el modelo y la vista.</li>
+    <li><strong>src/models</strong>: almacena y expone los datos de la aplicación.</li>
+    <li><strong>src/views</strong>: plantillas EJS que generan el HTML.</li>
+  </ul>
+</section>
+
+<%- include("partials/footer") %>

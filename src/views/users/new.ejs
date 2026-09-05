@@ -1,0 +1,22 @@
+<%- include("../partials/header", { titulo }) %>
+
+<section>
+  <a href="/usuarios">&larr; Volver al listado</a>
+  <h1>Nuevo usuario</h1>
+
+  <% if (typeof error !== "undefined") { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <form class="form" action="/usuarios" method="POST">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <button type="submit" class="btn">Guardar</button>
+  </form>
+</section>
+
+<%- include("../partials/footer") %>

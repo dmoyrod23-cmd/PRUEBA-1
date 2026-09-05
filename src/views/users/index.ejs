@@ -1,0 +1,31 @@
+<%- include("../partials/header", { titulo }) %>
+
+<section>
+  <div class="section-header">
+    <h1>Usuarios</h1>
+    <a class="btn" href="/usuarios/nuevo">+ Nuevo usuario</a>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% usuarios.forEach((usuario) => { %>
+        <tr>
+          <td><%= usuario.id %></td>
+          <td><%= usuario.nombre %></td>
+          <td><%= usuario.email %></td>
+          <td><a href="/usuarios/<%= usuario.id %>">Ver</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</section>
+
+<%- include("../partials/footer") %>

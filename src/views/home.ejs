@@ -1,0 +1,30 @@
+<%- include("partials/header", { titulo }) %>
+
+<section class="hero">
+  <h1>Bienvenido a la app MVC</h1>
+  <p>
+    Esta página se sirve a través de un <strong>enrutador</strong> (<code>src/routes/web.js</code>)
+    que despacha cada URL a un método de <strong>controlador</strong>
+    (<code>src/controllers</code>), el cual usa un <strong>modelo</strong>
+    (<code>src/models</code>) y renderiza una <strong>vista</strong>
+    (<code>src/views</code>).
+  </p>
+  <a class="btn" href="/usuarios">Ver usuarios</a>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h3>Model</h3>
+    <p>Gestiona los datos y la lógica de negocio. Ej: <code>UserModel</code>.</p>
+  </div>
+  <div class="card">
+    <h3>View</h3>
+    <p>Plantillas EJS que renderizan el HTML final a partir de los datos.</p>
+  </div>
+  <div class="card">
+    <h3>Controller</h3>
+    <p>Recibe la petición del enrutador, consulta el modelo y elige la vista.</p>
+  </div>
+</section>
+
+<%- include("partials/footer") %>
